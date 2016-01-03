@@ -1,0 +1,33 @@
+<section class="wrapper style1 section3" style="background-color: whitesmoke;">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="Search image by tags (like taj)..." ng-model="flickrCtrl.searchByTagVal">
+					<span class="input-group-btn"><button class="btn btn-success" type="button" ng-click="flickrCtrl.searchByTag()">Seach By Tag(s)</button></span>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6 col-md-4" ng-repeat="imageFeed in flickrCtrl.publicFeedList">
+				<div class="thumbnail" style="border: 1px solid;">
+					<img ng-src="{{imageFeed.imgUrl}}" alt="image from flickr" style="width:400px; height:400px;">
+					<div class="caption">
+						<h3>{{imageFeed.title}}</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row" ng-show="!flickrCtrl.publicFeedList.length">
+			<div class="col-lg-6">
+				<div class="thumbnail">
+					<img ng-src="{{flickrCtrl.noResult.imgUrl}}" alt="image not found" style="width:800px; height:200px;">
+					<div class="caption">
+						<h3>{{flickrCtrl.noResult.emptyStringMsg}}</h3>
+					</div>
+				</div>
+				<a href="#" class="btn btn-primary" role="button" ng-click="flickrCtrl.onDefaultDataLoad()">Load Default Image(s)</a>
+			</div>
+		</div>
+	</div>
+</section>

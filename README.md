@@ -7,3 +7,10 @@ Prerequesitices :
 
 1) Client
 2) Server
+
+ 1) install node-modules (install node modules from : https://www.npmjs.com/)
+   a) cros
+   b) flickrapi
+   c) express
+   d) mongodb
+   e) mongoose

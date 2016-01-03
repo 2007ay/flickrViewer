@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html ng-app="flickrDemoApp">
+
+<head>
+	<title>Flickr Feed Demo</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/style.css" />
+	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="assets/js/main.js"></script>
+
+	<script src="app/style/js/bootstrap.min.js"></script>
+	<link href="app/style/css/bootstrap.css" rel="stylesheet" />
+
+	<script src="app/libs/angular-1.4.5.js"></script>
+	<script src="app/libs/angular-ui-router.js"></script>
+	<script src="app/libs/angular-animate.js"></script>
+
+	<script src="app/app.js"></script>
+	<script src="app/core/constant/Constant.js"></script>
+	<script src="app/core/routing/appRouting.js"></script>
+	<script src="app/core/services/HTTPService.js"></script>
+	<script src="app/core/services/URLService.js"></script>
+	<script src="app/core/factory/cacheService.js"></script>
+	<script src="app/services/FlickrDataService.js"></script>
+	<script src="app/controllers/FlickrFeedDetailsCtrl.js"></script>
+
+</head>
+
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Flickr Image Viewer</a>
+			</div>
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+	<div id="page-wrapper">
+		<div ui-view></div>
+	</div>
+</body>
+
+</html>
